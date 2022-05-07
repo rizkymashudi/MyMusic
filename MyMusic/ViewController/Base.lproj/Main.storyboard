@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9N-RF-gze">
+                                <rect key="frame" x="16" y="320" width="382" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piB-h1-7bM">
+                                <rect key="frame" x="203" y="433" width="143" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="gYw-mc-8mg"/>
+                                    <constraint firstAttribute="width" constant="143" id="vPR-VU-GRT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="didTapStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ic6-tf-Oi9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ru7-XE-g8J">
+                                <rect key="frame" x="52" y="433" width="143" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="OdH-cG-xl1"/>
+                                    <constraint firstAttribute="height" constant="31" id="uCY-Z4-1dC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <connections>
+                                    <action selector="didTapPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJS-DC-QHW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ru7-XE-g8J" firstAttribute="top" secondItem="b9N-RF-gze" secondAttribute="bottom" constant="72" id="3vd-KU-4m0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="piB-h1-7bM" secondAttribute="trailing" constant="68" id="58g-HJ-BuW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9N-RF-gze" secondAttribute="trailing" constant="16" id="8Zj-Vu-OoH"/>
+                            <constraint firstItem="piB-h1-7bM" firstAttribute="top" secondItem="b9N-RF-gze" secondAttribute="bottom" constant="72" id="BWc-II-1PY"/>
+                            <constraint firstItem="b9N-RF-gze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="276" id="JtS-Hp-QYs"/>
+                            <constraint firstItem="b9N-RF-gze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LJh-DR-DWN"/>
+                            <constraint firstItem="Ru7-XE-g8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="g0i-Yx-Wxn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="Ru7-XE-g8J" id="yL9-nH-Wo2"/>
+                        <outlet property="btnStop" destination="piB-h1-7bM" id="Zu3-6Z-O5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
